@@ -70,12 +70,9 @@ class ProductPriceAggregationController {
         this.productClient = productClient;
     }
 
-    @Autowired
-    RestTemplate restTemplate;
-
 
     @GetMapping("/total")
-    public Double aggregate () throws URISyntaxException {
+    public Double aggregate () {
 
         /*RequestEntity request = RequestEntity
                 .get(new URI("http://192.168.1.130:8080/products")).build();
@@ -93,9 +90,5 @@ class ProductPriceAggregationController {
         return total;
     }
 
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 
 }
